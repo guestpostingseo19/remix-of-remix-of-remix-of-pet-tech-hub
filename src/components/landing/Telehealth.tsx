@@ -13,7 +13,7 @@ export function Telehealth() {
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 lg:grid-cols-2">
         <img
           src={featureTelehealth}
-          alt="Veterinarian on a holographic video consult screen with live pet vitals beside a cat"
+          alt="Pet owner on a video consult with a licensed vet while their dog sits beside the desk"
           loading="lazy"
           width={1024}
           height={1024}

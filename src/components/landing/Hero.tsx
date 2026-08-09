@@ -45,7 +45,7 @@ export function Hero() {
             src={heroCollar}
             width={1600}
             height={1200}
-            alt="Dog wearing a Vetra smart collar with glowing aqua LED and floating health telemetry readouts"
+            alt="Vetra smart collar in warm ceramic resting on linen, amber status light glowing"
             className="relative w-full rounded-3xl hairline object-cover glow-soft"
           />
         </div>

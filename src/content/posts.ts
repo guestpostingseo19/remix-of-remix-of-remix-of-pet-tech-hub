@@ -35,7 +35,7 @@ export const posts: Post[] = [
     category: "Health",
     cover: blogMonitoring,
     coverAlt:
-      "Glowing aqua heart-rate waveform over the silhouette of a sleeping dog",
+      "Dog sleeping on warm linen bedding wearing a Vetra sensor",
     sections: [
       {
         heading: "Continuous data beats the annual checkup",
@@ -83,7 +83,7 @@ export const posts: Post[] = [
     category: "AI",
     cover: blogAi,
     coverAlt:
-      "Neural network of glowing teal nodes forming the profile of a dog's head",
+      "Layered amber glass forms refracting light, evoking machine learning",
     sections: [
       {
         heading: "The model is learning your pet, not pets in general",
@@ -130,7 +130,7 @@ export const posts: Post[] = [
     category: "Gear",
     cover: blogGps,
     coverAlt:
-      "Glowing aqua satellite orbit path converging on a location pin over a dark city grid",
+      "Aerial view of a winding countryside path at golden hour",
     sections: [
       {
         heading: "Update rate beats raw accuracy",
@@ -176,7 +176,7 @@ export const posts: Post[] = [
     category: "Care",
     cover: blogTelehealth,
     coverAlt:
-      "Glowing teal holographic stethoscope beside a video call window outline",
+      "Hands holding a phone during a warm-lit vet video consultation",
     sections: [
       {
         heading: "What a remote consult genuinely handles",
