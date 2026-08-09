@@ -7,16 +7,21 @@ export function Wordmark({ className }: { className?: string }) {
         className="h-7 w-7 text-primary"
         fill="none"
       >
-        <circle cx="16" cy="16" r="14.5" stroke="currentColor" strokeOpacity="0.35" />
         <path
-          d="M6 17.5h4.2l2.3-6.2 3.3 10.4 2.6-7.4 1.7 3.2H26"
+          d="M16 27.5C10.2 23.4 4.5 19.6 4.5 14.1A6.6 6.6 0 0 1 16 9.6a6.6 6.6 0 0 1 11.5 4.5c0 5.5-5.7 9.3-11.5 13.4Z"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeOpacity="0.4"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M9 16.2h3.4l1.9-4.6 2.7 8.2 2.1-5.1 1.3 1.5H23"
+          stroke="currentColor"
+          strokeWidth="1.9"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
-      <span className="font-display text-lg font-bold tracking-tight text-foreground">
+      <span className="font-display text-lg font-semibold tracking-[-0.04em] text-foreground">
         Vetra
       </span>
     </span>

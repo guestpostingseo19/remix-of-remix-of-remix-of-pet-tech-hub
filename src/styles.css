@@ -105,8 +105,8 @@
 }
 
 .dark {
-  --background: oklch(0.16 0.032 250);
-  --foreground: oklch(0.96 0.008 220);
+  --background: oklch(0.172 0.014 62);
+  --foreground: oklch(0.955 0.012 82);
 }
 
 @layer base {
@@ -130,7 +130,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.025em;
+    font-weight: 600;
+    letter-spacing: -0.032em;
   }
 }
 
