@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Vetra design system — warm, human pet tech.
+ * PawTech design system — warm, human pet tech.
  * Warm ink surfaces, ember primary, sage signal accent.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
@@ -177,7 +177,7 @@
 }
 
 @utility pulse-dot {
-  animation: vetra-pulse 2.4s ease-in-out infinite;
+  animation: paw-pulse 2.4s ease-in-out infinite;
 }
 
 @utility float-slow {
@@ -213,7 +213,7 @@
   }
 }
 
-@keyframes vetra-pulse {
+@keyframes paw-pulse {
   0%,
   100% {
     opacity: 1;
