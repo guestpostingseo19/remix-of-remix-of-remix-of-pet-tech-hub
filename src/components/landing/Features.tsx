@@ -8,25 +8,25 @@ const features = [
     title: "Pet GPS tracker",
     copy: "LTE-M and NB-IoT dual-band positioning with a 2.4-second live mode. Geofences that understand a nap by the fence isn't an escape.",
     image: featureGps,
-    alt: "Matte black pet GPS tracker on a collar above a glowing aqua map grid",
+    alt: "Dog on a golden-hour trail tracked by the Vetra GPS collar",
   },
   {
     title: "Smart collar for dogs and cats",
     copy: "Resting heart rate, respiration, temperature and sleep fragmentation sampled continuously. 22 grams, IP68, 18-day battery.",
     image: heroCollar,
-    alt: "Close view of the Vetra smart collar with a glowing aqua LED band",
+    alt: "Vetra smart collar in warm ceramic with an amber status light on linen",
   },
   {
     title: "Pet camera",
     copy: "Night-vision 2K with on-device behaviour detection. Get a clip when your pet paces, not every time a curtain moves.",
     image: featureCamera,
-    alt: "Wall-mounted pet camera with a glowing aqua lens ring watching a cat at night",
+    alt: "Vetra home camera on a wooden shelf watching a cat in warm afternoon light",
   },
   {
     title: "Smart pet feeder",
     copy: "Portion control that adapts to the activity load your collar recorded that day. Refill alerts before the hopper runs dry.",
     image: featureFeeder,
-    alt: "Matte black smart pet feeder with an aqua status ring dispensing food",
+    alt: "Ceramic Vetra smart feeder dispensing a portion into a matching bowl",
   },
 ];
 
