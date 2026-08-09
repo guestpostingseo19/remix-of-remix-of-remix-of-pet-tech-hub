@@ -180,6 +180,39 @@
   animation: vetra-pulse 2.4s ease-in-out infinite;
 }
 
+@utility float-slow {
+  animation: paw-float 7s ease-in-out infinite;
+}
+
+@utility rise-in {
+  animation: paw-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility shimmer {
+  background-size: 220% 100%;
+  animation: paw-shimmer 6s linear infinite;
+}
+
+@utility story-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1.5px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-primary);
+    transition: transform 0.3s ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
 @keyframes vetra-pulse {
   0%,
   100% {
@@ -189,5 +222,45 @@
   50% {
     opacity: 0.65;
     box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@keyframes paw-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes paw-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes paw-shimmer {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 220% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
