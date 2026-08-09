@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Wordmark } from "./Wordmark";
+import { ThemeToggle } from "./ThemeToggle";
+
 
 const links = [
   { label: "Services", href: "/#platform" },
@@ -34,12 +36,16 @@ export function SiteHeader() {
           </Link>
         </nav>
 
-        <a
-          href="/#pricing"
-          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:glow-ring"
-        >
-          Join PawTech
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="/#pricing"
+            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:glow-ring"
+          >
+            Join PawTech
+          </a>
+        </div>
+
       </div>
     </header>
   );
