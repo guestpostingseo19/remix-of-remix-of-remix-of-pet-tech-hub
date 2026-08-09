@@ -3,39 +3,70 @@ import { Moon, Sun } from "lucide-react";
 
 type Mode = "night" | "day";
 
-export function ThemeToggle() {
+const KEY = "pawtech-theme";
+
+function apply(mode: Mode) {
+  const root = document.documentElement;
+  root.classList.toggle("light", mode === "day");
+  root.classList.toggle("dark", mode === "night");
+  try {
+    localStorage.setItem(KEY, mode);
+  } catch {
+    /* storage blocked — theme still applies for this visit */
+  }
+}
+
+export function ThemeToggle({ className }: { className?: string }) {
   const [mode, setMode] = useState<Mode>("night");
 
   useEffect(() => {
-    const saved = (localStorage.getItem("pawtech-theme") as Mode | null) ?? "night";
+    let saved: Mode = "night";
+    try {
+      if (localStorage.getItem(KEY) === "day") saved = "day";
+    } catch {
+      /* ignore */
+    }
     setMode(saved);
+    apply(saved);
   }, []);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("light", mode === "day");
-    localStorage.setItem("pawtech-theme", mode);
-  }, [mode]);
+  function toggle() {
+    const next: Mode = mode === "night" ? "day" : "night";
+    setMode(next);
+    apply(next);
+  }
 
-  const next = mode === "night" ? "day" : "night";
+  const isDay = mode === "day";
 
   return (
     <button
       type="button"
-      onClick={() => setMode(next)}
-      aria-label={`Switch to ${next} mode`}
-      title={`Switch to ${next} mode`}
-      className="relative flex h-9 w-9 items-center justify-center rounded-full hairline bg-surface/70 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+      onClick={toggle}
+      role="switch"
+      aria-checked={isDay}
+      aria-label={`Switch to ${isDay ? "night" : "day"} mode`}
+      title={`Switch to ${isDay ? "night" : "day"} mode`}
+      className={`group inline-flex items-center gap-1.5 rounded-full hairline bg-surface/70 p-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary ${className ?? ""}`}
     >
-      <Sun
-        className={`absolute h-4 w-4 transition-all duration-500 ${
-          mode === "day" ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-50 opacity-0"
+      <span
+        className={`flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
+          isDay
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground group-hover:text-primary"
         }`}
-      />
-      <Moon
-        className={`absolute h-4 w-4 transition-all duration-500 ${
-          mode === "night" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-50 opacity-0"
+      >
+        <Sun className="h-3.5 w-3.5" />
+      </span>
+      <span
+        className={`flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
+          !isDay
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground group-hover:text-primary"
         }`}
-      />
+      >
+        <Moon className="h-3.5 w-3.5" />
+      </span>
+      <span className="sr-only">{isDay ? "Day mode on" : "Night mode on"}</span>
     </button>
   );
 }
