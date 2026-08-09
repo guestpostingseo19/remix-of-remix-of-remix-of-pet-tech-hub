@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { posts } from "@/content/posts";
 
-const title = "Vetra Journal — Pet Tech, Health Monitoring & GPS Guides";
+const title = "PawTech Journal — Pet Tech, Health Monitoring & GPS Guides";
 const description =
   "Practical writing on pet technology: AI pet health monitoring, choosing a pet GPS tracker, smart collars and when pet telehealth beats a clinic visit.";
 

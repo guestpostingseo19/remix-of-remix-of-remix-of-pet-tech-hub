@@ -9,35 +9,35 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <Wordmark />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Connected pet care. GPS tracking, AI health monitoring and 24/7 veterinary
-              telehealth in one collar.
+              A pet care service. We track your pet, watch their health every day, and put
+              a real vet on the line when you need one.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3">
             <div>
               <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                Platform
+                Services
               </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="/#platform" className="hover:text-foreground">
-                    GPS tracker
+                  <a href="/#platform" className="transition-colors hover:text-foreground">
+                    Live tracking
                   </a>
                 </li>
                 <li>
-                  <a href="/#platform" className="hover:text-foreground">
-                    Smart collar
+                  <a href="/#platform" className="transition-colors hover:text-foreground">
+                    Daily health watch
                   </a>
                 </li>
                 <li>
-                  <a href="/#platform" className="hover:text-foreground">
-                    Pet camera
+                  <a href="/#platform" className="transition-colors hover:text-foreground">
+                    Home check-ins
                   </a>
                 </li>
                 <li>
-                  <a href="/#platform" className="hover:text-foreground">
-                    Smart feeder
+                  <a href="/#platform" className="transition-colors hover:text-foreground">
+                    Food coaching
                   </a>
                 </li>
               </ul>
@@ -48,17 +48,20 @@ export function SiteFooter() {
               </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="/#telehealth" className="hover:text-foreground">
-                    Pet telehealth
+                  <a
+                    href="/#telehealth"
+                    className="transition-colors hover:text-foreground"
+                  >
+                    Vet video calls
                   </a>
                 </li>
                 <li>
-                  <a href="/#how" className="hover:text-foreground">
+                  <a href="/#how" className="transition-colors hover:text-foreground">
                     How it works
                   </a>
                 </li>
                 <li>
-                  <a href="/#faq" className="hover:text-foreground">
+                  <a href="/#faq" className="transition-colors hover:text-foreground">
                     FAQ
                   </a>
                 </li>
@@ -70,13 +73,13 @@ export function SiteFooter() {
               </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link to="/blog" className="hover:text-foreground">
+                  <Link to="/blog" className="transition-colors hover:text-foreground">
                     Journal
                   </Link>
                 </li>
                 <li>
-                  <a href="/#pricing" className="hover:text-foreground">
-                    Pricing
+                  <a href="/#pricing" className="transition-colors hover:text-foreground">
+                    Plans
                   </a>
                 </li>
               </ul>
@@ -85,8 +88,8 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-12 border-t border-hairline pt-6 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Vetra Pet Technologies. Vetra is not a substitute
-          for emergency veterinary care.
+          © {new Date().getFullYear()} PawTech Pet Care Services. PawTech does not replace
+          emergency vet care.
         </p>
       </div>
     </footer>

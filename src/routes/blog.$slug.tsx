@@ -12,14 +12,14 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Article not found — Vetra" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Article not found — PawTech" }, { name: "robots", content: "noindex" }],
       };
     }
     const { post } = loaderData;
     const url = `/blog/${params.slug}`;
     return {
       meta: [
-        { title: `${post.title} — Vetra Journal` },
+        { title: `${post.title} — PawTech Journal` },
         { name: "description", content: post.description },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.description },
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/blog/$slug")({
             headline: post.title,
             description: post.description,
             datePublished: post.date,
-            author: { "@type": "Organization", name: "Vetra" },
+            author: { "@type": "Organization", name: "PawTech" },
           }),
         },
         {
@@ -148,7 +148,7 @@ function PostPage() {
                 Put this into practice
               </h2>
               <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
-                Vetra tracks location, vitals and sleep continuously, and puts a licensed
+                PawTech tracks location, vitals and sleep continuously, and puts a licensed
                 vet on the line when the numbers drift.
               </p>
               <a

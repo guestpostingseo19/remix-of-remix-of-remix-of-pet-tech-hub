@@ -10,9 +10,9 @@ import { Pricing } from "@/components/landing/Pricing";
 import { Faq, faqs } from "@/components/landing/Faq";
 import { BlogPreview } from "@/components/landing/BlogPreview";
 
-const title = "Vetra — Pet GPS Tracker & AI Health Monitoring Collar";
+const title = "PawTech — Pet Tracking, Health Checks & 24/7 Vet Calls";
 const description =
-  "Vetra is a pet GPS tracker and AI health monitoring collar with 24/7 pet telehealth. Live location, vitals, sleep and vet access in one connected platform.";
+  "PawTech is a pet care service. We track your pet, check their health every day, and connect you with a real vet on video any time, day or night.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

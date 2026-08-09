@@ -35,7 +35,7 @@ export const posts: Post[] = [
     category: "Health",
     cover: blogMonitoring,
     coverAlt:
-      "Dog sleeping on warm linen bedding wearing a Vetra sensor",
+      "Dog sleeping on warm linen bedding wearing a PawTech sensor",
     sections: [
       {
         heading: "Continuous data beats the annual checkup",
