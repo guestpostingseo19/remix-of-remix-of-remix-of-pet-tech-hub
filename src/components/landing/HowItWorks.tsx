@@ -1,40 +1,50 @@
+import { Reveal } from "@/components/Reveal";
+
 const steps = [
   {
     n: "01",
-    title: "Clip it on",
-    copy: "The collar pairs in about forty seconds and starts streaming immediately. No hub, no base station.",
+    title: "Sign up",
+    copy: "Tell us about your pet and link the tracker or tag you already use. It takes about two minutes.",
   },
   {
     n: "02",
-    title: "Let it learn",
-    copy: "Two to four weeks of baseline building. Vetra learns your animal's rhythm rather than a breed average.",
+    title: "We learn their normal",
+    copy: "For the first few weeks we learn how your pet moves, sleeps and rests. Every pet is different.",
   },
   {
     n: "03",
-    title: "Get told early",
-    copy: "When several signals drift together, you get one clear alert — and a vet you can call about it.",
+    title: "We tell you early",
+    copy: "If things start to change, you get one clear message and a vet you can call about it.",
   },
 ];
 
 export function HowItWorks() {
   return (
     <section id="how" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
-      <span className="text-xs font-semibold uppercase tracking-[0.22em] text-signal">
-        How it works
-      </span>
-      <h2 className="mt-4 max-w-xl font-display text-3xl font-bold sm:text-4xl">
-        Three steps, then it stays out of your way
-      </h2>
+      <Reveal>
+        <span className="text-xs font-semibold uppercase tracking-[0.22em] text-signal">
+          How it works
+        </span>
+        <h2 className="mt-4 max-w-xl font-display text-3xl font-bold sm:text-4xl">
+          Three easy steps, then we stay quiet
+        </h2>
+      </Reveal>
 
       <ol className="mt-14 grid gap-6 md:grid-cols-3">
-        {steps.map((s) => (
-          <li key={s.n} className="rounded-2xl hairline bg-surface p-7">
-            <span className="font-display text-sm font-bold tracking-[0.2em] text-primary">
-              {s.n}
-            </span>
-            <h3 className="mt-4 font-display text-xl font-semibold">{s.title}</h3>
-            <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-          </li>
+        {steps.map((s, i) => (
+          <Reveal key={s.n} delay={i * 110}>
+            <li className="group h-full rounded-2xl hairline bg-surface p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60">
+              <span className="font-display text-sm font-bold tracking-[0.2em] text-primary">
+                {s.n}
+              </span>
+              <h3 className="mt-4 font-display text-xl font-semibold transition-colors group-hover:text-primary">
+                {s.title}
+              </h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                {s.copy}
+              </p>
+            </li>
+          </Reveal>
         ))}
       </ol>
     </section>
