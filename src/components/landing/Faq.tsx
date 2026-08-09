@@ -1,46 +1,56 @@
+import { Reveal } from "@/components/Reveal";
+
 export const faqs = [
   {
-    q: "How accurate is the pet GPS tracker?",
-    a: "Vetra resolves to roughly three metres in open sky and refreshes every 2.4 seconds in live mode. In dense urban or heavy tree cover, accuracy widens to about eight metres, and the collar falls back to cell-tower triangulation if satellites drop entirely.",
+    q: "How close is the pet tracking?",
+    a: "In open sky we can place your pet within about three metres, and the map updates every 2.4 seconds. In a city or under thick trees it can be closer to eight metres. If the signal drops, we fall back to phone towers so you still get a rough spot.",
   },
   {
-    q: "Does the smart collar work for cats?",
-    a: "Yes. The collar weighs 22 grams and uses a breakaway safety clasp, which keeps it under the 5% body-weight guideline for cats above roughly 4.5 kg. Vitals modelling is tuned separately for feline baselines.",
+    q: "Does the service work for cats?",
+    a: "Yes. It works with light cat tags and safe break-away collars. We use different health ranges for cats, because a cat's normal heart rate and sleep are not the same as a dog's.",
   },
   {
-    q: "What can AI pet health monitoring actually detect?",
-    a: "It detects deviation, not disease. Vetra learns your pet's personal baseline for heart rate, respiration, activity and sleep, then flags when several of those drift together — a pattern that frequently precedes visible symptoms by several days. It is an early-warning system, not a diagnosis.",
+    q: "What can the health watch really see?",
+    a: "It sees change, not illness. We learn what is normal for your pet, then tell you when a few things move at once. That often shows up days before you would notice anything. It is an early heads-up, not a diagnosis.",
   },
   {
-    q: "Is pet telehealth a replacement for my vet?",
-    a: "No. Telehealth handles triage, minor conditions, behaviour, nutrition and follow-ups. Anything needing hands, imaging or bloodwork goes to a clinic, and our vets will tell you that directly on the call.",
+    q: "Do vet video calls replace my own vet?",
+    a: "No. Video calls are great for advice, small問題-free worries, behaviour, food and follow-ups. Anything that needs hands, X-rays or blood tests needs a clinic, and our vets will say so on the call.",
   },
   {
-    q: "How long does the battery last?",
-    a: "Eighteen days in passive mode with periodic pings. Continuous live tracking draws far more power and gives roughly six hours, which is the figure worth planning around during an actual escape.",
+    q: "Do I need to buy anything?",
+    a: "No. PawTech is a service only. It works with most common pet trackers, tags and home cameras you may already own, and we help you set it up on your first call.",
   },
   {
-    q: "Do I need a subscription?",
-    a: "Yes — cellular connectivity, vet access and model hosting are ongoing costs. The collar hardware is included with every plan and there is no upfront device fee.",
+    q: "Can I stop when I want?",
+    a: "Yes. Plans are month to month. You can pause or cancel from your account page and you will not be charged again.",
   },
 ];
 
 export function Faq() {
   return (
     <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-5 py-24">
-      <span className="text-xs font-semibold uppercase tracking-[0.22em] text-signal">
-        Questions
-      </span>
-      <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
-        Answers before you commit
-      </h2>
+      <Reveal>
+        <span className="text-xs font-semibold uppercase tracking-[0.22em] text-signal">
+          Questions
+        </span>
+        <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
+          Answers before you join
+        </h2>
+      </Reveal>
 
       <dl className="mt-12 divide-y divide-hairline border-y border-hairline">
-        {faqs.map((f) => (
-          <div key={f.q} className="py-7">
-            <dt className="font-display text-lg font-semibold">{f.q}</dt>
-            <dd className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{f.a}</dd>
-          </div>
+        {faqs.map((f, i) => (
+          <Reveal key={f.q} delay={i * 70}>
+            <div className="group py-7">
+              <dt className="font-display text-lg font-semibold transition-colors group-hover:text-primary">
+                {f.q}
+              </dt>
+              <dd className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                {f.a}
+              </dd>
+            </div>
+          </Reveal>
         ))}
       </dl>
     </section>
