@@ -77,20 +77,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vetra — Connected Pet Care" },
+      { title: "PawTech — Connected Pet Care Services" },
       {
         name: "description",
         content:
-          "Vetra builds pet GPS tracking, AI health monitoring and 24/7 veterinary telehealth into one connected collar.",
+          "PawTech is a pet care service: live pet tracking, daily health checks and 24/7 vet video calls.",
       },
-      { name: "author", content: "Vetra" },
-      { property: "og:site_name", content: "Vetra" },
+      { name: "author", content: "PawTech" },
+      { property: "og:site_name", content: "PawTech" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -104,9 +104,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Vetra",
+          name: "PawTech",
           description:
-            "Pet GPS tracking, AI health monitoring and veterinary telehealth in one connected collar.",
+            "Pet tracking, daily health checks and 24/7 vet video calls, offered as one simple service.",
         }),
       },
     ],
