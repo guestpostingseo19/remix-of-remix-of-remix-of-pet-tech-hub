@@ -2,16 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { Wordmark } from "./Wordmark";
 
 const links = [
-  { label: "Platform", href: "/#platform" },
-  { label: "Telehealth", href: "/#telehealth" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Services", href: "/#platform" },
+  { label: "Vet calls", href: "/#telehealth" },
+  { label: "Plans", href: "/#pricing" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <Link to="/" aria-label="Vetra home">
+        <Link to="/" aria-label="PawTech home">
           <Wordmark />
         </Link>
 
@@ -20,14 +20,14 @@ export function SiteHeader() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="story-link text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {l.label}
             </a>
           ))}
           <Link
             to="/blog"
-            className="text-sm text-muted-foreground transition-colors hover:text-primary"
+            className="story-link text-sm text-muted-foreground transition-colors hover:text-primary"
             activeProps={{ className: "text-sm text-primary" }}
           >
             Journal
@@ -36,9 +36,9 @@ export function SiteHeader() {
 
         <a
           href="/#pricing"
-          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-shadow hover:glow-ring"
+          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:glow-ring"
         >
-          Get Vetra
+          Join PawTech
         </a>
       </div>
     </header>
