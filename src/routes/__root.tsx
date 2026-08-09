@@ -125,7 +125,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem('pawtech-theme')==='day')document.documentElement.classList.add('light')}catch(e){}`,
+            __html: `try{var m=localStorage.getItem('pawtech-theme')==='day'?'light':'dark';document.documentElement.classList.add(m)}catch(e){document.documentElement.classList.add('dark')}`,
+
           }}
         />
       </head>
