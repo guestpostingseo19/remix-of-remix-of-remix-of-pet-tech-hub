@@ -123,6 +123,11 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('pawtech-theme')==='day')document.documentElement.classList.add('light')}catch(e){}`,
+          }}
+        />
       </head>
       <body>
         {children}
@@ -131,6 +136,7 @@ function RootShell({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
