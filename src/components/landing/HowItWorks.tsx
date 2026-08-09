@@ -30,10 +30,10 @@ export function HowItWorks() {
         </h2>
       </Reveal>
 
-      <ol className="mt-14 grid gap-6 md:grid-cols-3">
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
         {steps.map((s, i) => (
           <Reveal key={s.n} delay={i * 110}>
-            <li className="group h-full rounded-2xl hairline bg-surface p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60">
+            <div className="group h-full rounded-2xl hairline bg-surface p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60">
               <span className="font-display text-sm font-bold tracking-[0.2em] text-primary">
                 {s.n}
               </span>
@@ -43,10 +43,10 @@ export function HowItWorks() {
               <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
                 {s.copy}
               </p>
-            </li>
+            </div>
           </Reveal>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }

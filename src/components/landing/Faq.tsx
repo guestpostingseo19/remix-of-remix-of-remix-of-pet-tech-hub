@@ -15,7 +15,7 @@ export const faqs = [
   },
   {
     q: "Do vet video calls replace my own vet?",
-    a: "No. Video calls are great for advice, small問題-free worries, behaviour, food and follow-ups. Anything that needs hands, X-rays or blood tests needs a clinic, and our vets will say so on the call.",
+    a: "No. Video calls are great for advice, small worries, behaviour, food and follow-ups. Anything that needs hands, X-rays or blood tests needs a clinic, and our vets will say so on the call.",
   },
   {
     q: "Do I need to buy anything?",
