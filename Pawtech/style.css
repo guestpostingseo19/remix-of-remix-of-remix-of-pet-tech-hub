@@ -1,0 +1,18 @@
+/*
+Theme Name: PawTech
+Theme URI: https://pawtech.example.com/
+Author: PawTech
+Author URI: https://pawtech.example.com/
+Description: PawTech — a production-ready, security-hardened WordPress theme for connected pet care services. Pixel-faithful port of the PawTech marketing site with full Elementor support, custom Elementor widgets for every section, day/night theming and complete blog templates.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pawtech
+Tags: blog, business, one-column, two-columns, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, block-styles, wide-blocks, editor-style, full-width-template
+*/
+
+/* All runtime styling is compiled to assets/css/theme.css (Tailwind CSS v4 build).
+   This file exists for the WordPress theme header and for child-theme overrides. */
