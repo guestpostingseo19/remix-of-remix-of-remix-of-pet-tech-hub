@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getPost } from "@/content/posts";
+import { getPost, type Post } from "@/content/posts";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
