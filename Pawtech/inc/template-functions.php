@@ -287,12 +287,12 @@ function pawtech_excerpt_more() {
 add_filter( 'excerpt_more', 'pawtech_excerpt_more' );
 
 /**
- * Add rel=noopener to comment/content links pointing off-site.
+ * Force rel="noopener noreferrer" on links that open a new tab.
  *
  * @param string $content Content HTML.
  * @return string
  */
 function pawtech_safe_external_links( $content ) {
-	return wp_rel_callback( $content, 'noopener noreferrer' );
+	return wp_targeted_link_rel( (string) $content );
 }
 add_filter( 'comment_text', 'pawtech_safe_external_links', 20 );
